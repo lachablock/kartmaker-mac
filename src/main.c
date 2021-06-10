@@ -558,7 +558,7 @@ int main(int argc, char *argv[]) {
 	// Process sprite sheet into separate sprites
 	printf("Processing sprites...\n");
 	processSprites();
-	printf("Processing sprites... done.\n");
+	printf("Processing sprites... Done.\n");
 	
 	processGfx();
 	
