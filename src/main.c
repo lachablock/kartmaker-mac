@@ -159,7 +159,7 @@ void loadImages(struct wadfile* wad, struct Filemap* files)
 
 cJSON* loadJSON(char* filename) {
 	// Now get JSON
-	unsigned char* buffer;
+	char* buffer;
 	off_t size, bytesRead;
 	FILE* file = fopen(filename, "rb");
 
@@ -597,7 +597,7 @@ int main(int argc, char *argv[]) {
 			cJSON_GetObjectItem(metadata, "prefcolor")->valuestring,
 			prefix, prefix, prefix, prefix, prefix, prefix, prefix, prefix, prefix, prefix, prefix
 		);
-		add_lump(wad, NULL, "S_SKIN", size, buf);
+		add_lump(wad, NULL, "S_SKIN", size, (unsigned char *)buf);
 	}
 	printf("Done.\n");
 	
