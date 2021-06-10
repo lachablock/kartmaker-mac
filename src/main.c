@@ -23,7 +23,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <direct.h>
+#include <unistd.h>
 
 #include "cJSON.h"
 #include "lodepng.h"
@@ -497,7 +497,7 @@ int main(int argc, char *argv[]) {
 	FILE* wadf; // File pointer for writing the WAD.
 	
 	if (argc != 2) {
-		printf("kartmaker <folder>: Converts a structured folder into an SRB2Kart character WAD. (Try dragging the folder onto the EXE!)");
+		printf("kartmaker <folder>: Converts a structured folder into an SRB2Kart character WAD. (Try dragging the folder onto the EXE!)\n");
 		return 1;
 	}
 	
